@@ -1,0 +1,19 @@
+# 文本文件按内容自动识别，统一以 LF 入库
+* text=auto
+
+# Windows PowerShell / 批处理（Git for Windows 上按 CRLF 检出更稳妥）
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# 二进制文件不做行尾/文本转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.exe binary
+*.dll binary
+
+# 生成数据（base64 内嵌 UI 素材）不计入语言统计
+scripts/desktop/WXBOTMascotData.cs linguist-generated=true

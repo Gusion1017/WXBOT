@@ -1,0 +1,31 @@
+# 运行时数据（手册 §9：state/ 为运行时目录，不入库）
+state/
+
+# 本地配置（含机器路径与账号名，样例见 config/app.example.json）
+config/app.json
+config/app.json.broken-*.json
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# 日志（运行时）
+logs/
+*.log
+
+# 编辑器/系统
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# 构建产物（可复现：npm run build:exe）
+WXBOT.exe

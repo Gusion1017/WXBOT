@@ -1,0 +1,8 @@
+# 读取层运行时依赖（M1–M3）
+# 注意：手册原写 sqlcipher3-binary，但该包只发布 Linux wheel；
+# Windows 上用 sqlcipher3-wheels（同一 sqlcipher3 模块，带 cp312 win_amd64 wheel）。
+sqlcipher3-wheels==0.5.7
+cryptography==50.0.2
+zstandard==0.25.0
+pycryptodome==4.0.1
+Pillow==13.0.0

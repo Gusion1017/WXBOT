@@ -1,0 +1,58 @@
+{
+  "name": "wxbot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Windows 本地微信 AI 助手（Python + Node.js + WinForms）：读取微信本地库 + DeepSeek 拟人回复 + Hook 原生发送",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gusion1017/WXBOT.git"
+  },
+  "homepage": "https://github.com/Gusion1017/WXBOT",
+  "bugs": {
+    "url": "https://github.com/Gusion1017/WXBOT/issues"
+  },
+  "keywords": [
+    "wechat",
+    "wechat-bot",
+    "wechat-ai",
+    "ai-assistant",
+    "onebot",
+    "onebot-v11",
+    "deepseek",
+    "winforms",
+    "windows",
+    "python",
+    "nodejs",
+    "sqlcipher"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "init": "node scripts/project-config.mjs init",
+    "config": "node scripts/project-config.mjs validate",
+    "status": "node scripts/project-config.mjs status",
+    "start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/manage.ps1 start",
+    "stop": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/manage.ps1 stop",
+    "restart": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/manage.ps1 restart",
+    "build:exe": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-desktop.ps1",
+    "reader:check": ".venv\\Scripts\\python.exe scripts/reader-api.py --check",
+    "key:inspect": ".venv\\Scripts\\python.exe scripts/capture-key.py --inspect",
+    "cli": "node scripts/wxbot-cli.mjs",
+    "console": "node scripts/console-server.mjs",
+    "bridge": "node scripts/bridge.mjs",
+    "dev:db": ".venv\\Scripts\\python.exe scripts/dev/dev-db-inspect.py",
+    "dev:sse": "node scripts/dev/dev-sse-check.mjs",
+    "dev:media": "node scripts/dev/dev-media-check.mjs",
+    "dev:watch": "node scripts/dev/dev-watch.mjs",
+    "dev:soak": "node scripts/dev/dev-soak.mjs",
+    "media:check": "node scripts/dev/dev-media-check.mjs",
+    "test": "node --test \"tests/node/**/*.test.mjs\"",
+    "test:py": ".venv\\Scripts\\python.exe -m pytest tests/python -q"
+  },
+  "dependencies": {
+    "ws": "^8.22.0"
+  }
+}
